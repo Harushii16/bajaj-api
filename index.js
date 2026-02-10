@@ -41,6 +41,14 @@ function lcm(a, b) {
 }
 
 /* ---------- MAIN BFHL API ---------- */
+app.get("/bfhl", (req, res) => {
+  res.status(200).json({
+    is_success: true,
+    official_email: EMAIL,
+    message: "BFHL API is running. Use POST request."
+  });
+});
+
 app.post("/bfhl", (req, res) => {
   try {
     const body = req.body;
